@@ -32,7 +32,7 @@ Create a file named `project2.json` at the content root path (app base path) of 
 When the tool runs, it will produce the `.csproj` file shown below. This the file that would be used by MSBuild to manage the project for restoring packages, building the app, packaging, and publishing. In order for this scheme to work, it will be important for MS to make `prerestore` script execution available; otherwise, the tool would need to be attached to other events (e.g., Gulp watch, hot key execution, [GuardRex Status Bar Tasks](https://marketplace.visualstudio.com/items?itemName=GuardRex.status-bar-tasks)).
 
 ### Sample `project2.json` input file:
-```json
+```
 {
   "Project": {
     "@xmlns": "http://schemas.microsoft.com/developer/msbuild/2003",
