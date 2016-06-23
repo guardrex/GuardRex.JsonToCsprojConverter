@@ -23,11 +23,6 @@ Note: `prerestore` is not currently available for `dotnet cli`. As a temporary w
 ```
 
 You will also need the `guardrex-json-to-csproj-converter.exe` application available via the System PATH settings. Conversely, you can provide the full path to the executable in the `precompile` script value.
-```json
-"scripts": {
-    "precompile": "c:&#92;<path_to_the_tool_exe>&#92;guardrex-json-to-csproj-converter --framework %publish:FullTargetFramework%"
-},
-```
 
 ### Operation
 This version of the tool will look for a file named `project2.json` in the application. When a `dotnet restore` is run manually or via Visual Studio, the app will be executed and the JSON file will be converted into a `.csproj` file using the app name.
