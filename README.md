@@ -29,9 +29,9 @@ This version of the tool will look for a file named `project2.json` in the appli
 
 Create a file named `project2.json` at the content root path (app base path) of your application with the contents shown below, which is a mocked version of a `.csproj` file in JSON format. This would be the file that you would be editing manually in the future.
 
-When the tool runs, it will produce the `.csproj` file shown below. This the file that would be used by MSBuild to manage the project for restoring packages, building the app, packaging, and publishing.
+When the tool runs, it will produce the `.csproj` file shown below. This is the file that would be used by MSBuild to manage the project for restoring packages, building the app, packaging, and publishing.
 
-In order for this scheme to work, it will be important for MS to make `prerestore` script execution available; otherwise, the tool would need to be attached to other events (e.g., Gulp watch, hot key execution, [GuardRex Status Bar Tasks](https://marketplace.visualstudio.com/items?itemName=GuardRex.status-bar-tasks)).
+In order for this scheme to work, it will be important for MS to make `prerestore` script execution available; otherwise, the tool would need to be attached to other events (e.g., Gulp `watch`, hot key execution, [GuardRex Status Bar Tasks](https://marketplace.visualstudio.com/items?itemName=GuardRex.status-bar-tasks)).
 
 ### Sample `project2.json` input file
 Include this file in your project.
