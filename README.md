@@ -7,15 +7,15 @@ This custom tooling will take a `project.json` version of `<my_app>.csproj` and 
 [Microsoft.AspNetCore.Server.IISIntegration.Tools](https://github.com/aspnet/IISIntegration/tree/dev/src/Microsoft.AspNetCore.Server.IISIntegration.Tools)
 
 ### Installation
-**FUTURE:** Add the following to your `project.json`:
+#### FUTURE: Add the following to your `project.json`:
 ```json
 "scripts": {
     "prerestore": "guardrex-json-to-csproj-converter --framework %publish:FullTargetFramework%"
 },
 ```
-Note: `prerestore` is not currently available for `dotnet cli`. As a temporary workaround just to see the tool run, change `prerestore` to `precompile`, which is working right now. To see the tool run, you will need to build the project. See: https://github.com/dotnet/cli/issues/3436
+Note: `prerestore` is not currently available for `dotnet cli`. As a temporary workaround just to see the tool run, change `prerestore` to `precompile`, which is working right now. See: https://github.com/dotnet/cli/issues/3436
 
-**CURRENTLY:** Add the following to your `project.json`:
+#### CURRENTLY: Add the following to your `project.json`:
 ```json
 "scripts": {
     "precompile": "guardrex-json-to-csproj-converter --framework %publish:FullTargetFramework%"
@@ -25,7 +25,7 @@ Note: `prerestore` is not currently available for `dotnet cli`. As a temporary w
 You will also need the `guardrex-json-to-csproj-converter.exe` application available via the System PATH settings. Conversely, you can provide the full path to the executable in the `precompile` script value.
 ```json
 "scripts": {
-    "precompile": "c:\<path_to_the_tool_exe>\guardrex-json-to-csproj-converter --framework %publish:FullTargetFramework%"
+    "precompile": "c:\\<path_to_the_tool_exe>\\guardrex-json-to-csproj-converter --framework %publish:FullTargetFramework%"
 },
 ```
 
