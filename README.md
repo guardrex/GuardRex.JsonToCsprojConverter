@@ -33,7 +33,7 @@ When the tool runs, it will produce the `.csproj` file shown below. This the fil
 
 In order for this scheme to work, it will be important for MS to make `prerestore` script execution available; otherwise, the tool would need to be attached to other events (e.g., Gulp watch, hot key execution, [GuardRex Status Bar Tasks](https://marketplace.visualstudio.com/items?itemName=GuardRex.status-bar-tasks)).
 
-### Sample `project2.json` input file:
+### Sample `project2.json` input file (include this file in your project):
 ```
 {
   "Project": {
@@ -132,7 +132,7 @@ In order for this scheme to work, it will be important for MS to make `prerestor
 }
 ```
 
-### Sample `<my_app>.csproj` output file:
+### Sample `<my_app>.csproj` output file (the tool will convert the `project2.json` file into this `.csproj` output file):
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0" DefaultTargets="Build">
