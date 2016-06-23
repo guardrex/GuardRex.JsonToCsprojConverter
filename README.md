@@ -25,11 +25,13 @@ Note: `prerestore` is not currently available for `dotnet cli`. As a temporary w
 You will also need the `guardrex-json-to-csproj-converter.exe` application available via the System PATH settings. Conversely, you can provide the full path to the executable in the `precompile` script value.
 
 ### Operation
-This version of the tool will look for a file named `project2.json` in the application. When a `dotnet restore` is run manually or via Visual Studio, the app will be executed and the JSON file will be converted into a `.csproj` file using the app name.
+This version of the tool will look for a file named `project2.json` in the application. When a `dotnet restore`(future)/`dotnet build/pack/publish`(current) is run manually or via Visual Studio, the app will be executed and the JSON file will be converted into a `.csproj` file using the app name.
 
 Create a file named `project2.json` at the content root path (app base path) of your application with the contents shown below, which is a mocked version of a `.csproj` file in JSON format. This would be the file that you would be editing manually in the future.
 
-When the tool runs, it will produce the `.csproj` file shown below. This the file that would be used by MSBuild to manage the project for restoring packages, building the app, packaging, and publishing. In order for this scheme to work, it will be important for MS to make `prerestore` script execution available; otherwise, the tool would need to be attached to other events (e.g., Gulp watch, hot key execution, [GuardRex Status Bar Tasks](https://marketplace.visualstudio.com/items?itemName=GuardRex.status-bar-tasks)).
+When the tool runs, it will produce the `.csproj` file shown below. This the file that would be used by MSBuild to manage the project for restoring packages, building the app, packaging, and publishing.
+
+In order for this scheme to work, it will be important for MS to make `prerestore` script execution available; otherwise, the tool would need to be attached to other events (e.g., Gulp watch, hot key execution, [GuardRex Status Bar Tasks](https://marketplace.visualstudio.com/items?itemName=GuardRex.status-bar-tasks)).
 
 ### Sample `project2.json` input file:
 ```
