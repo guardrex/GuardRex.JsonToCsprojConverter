@@ -21,6 +21,7 @@ Note: `prerestore` is not currently available for `dotnet cli`. As a temporary w
     "precompile": "guardrex-json-to-csproj-converter --framework %publish:FullTargetFramework%"
 },
 ```
+This is a console application tool, so you should `dotnet restore` it, then publish as a self-contained app: `dotnet publish -c Release -r win10-x64`. The executable will be called `guardrex-json-to-csproj-converter.exe` and will be in the `publish` folder.
 
 You will also need the `guardrex-json-to-csproj-converter.exe` application available via the System PATH settings. Conversely, you can provide the full path to the executable in the `precompile` script value.
 
