@@ -30,13 +30,6 @@
             "showOutput": "always"
         },
         {
-            "taskName": "test",
-            "suppressTaskName": true,
-            "args" : ["dotnet", "test", "C:\\_APPLICATIONS\\GuardRex.AspNetCore.Server.IISIntegration.Tools"],
-            "isTestCommand": true,
-            "showOutput": "always"
-        },
-        {
             "taskName": "info",
             "suppressTaskName": true,
             "args" : ["dotnet", "--info"],
